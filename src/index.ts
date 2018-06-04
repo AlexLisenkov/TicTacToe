@@ -1,5 +1,5 @@
 import { Game } from "./Game";
 
-var viewport = document.querySelector("#viewport");
-var game = new Game(viewport);
+const viewport = document.querySelector("#viewport");
+const game = new Game(viewport);
 game.start();
