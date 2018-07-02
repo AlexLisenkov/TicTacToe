@@ -85,4 +85,15 @@ export class Board
         }
         return false
     }
+
+    getBoardAsHTML() : string {
+        return `${this.getMark(0)} ${this.getMark(1)} ${this.getMark(2)} <br/> 
+                ${this.getMark(3)} ${this.getMark(4)} ${this.getMark(5)} <br/> 
+                ${this.getMark(6)} ${this.getMark(7)} ${this.getMark(8)} <br/>`
+    }
+
+    getMark(index : number) : string {
+
+        return this.tiles[index].isMarked() ? this.tiles[index].getMark() : '-';
+    }
 }

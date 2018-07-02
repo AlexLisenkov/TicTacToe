@@ -1,5 +1,7 @@
 import { Board } from "./Board";
+import { HumanPlayer } from "./HumanPlayer";
 import { Player } from "./Player";
+import { AIPlayer } from "./AIPlayer";
 
 export class Game {
     private viewport : Element ;
@@ -10,8 +12,8 @@ export class Game {
     constructor(viewport : Element) {
         this.viewport = viewport;
         this.players = [
-            new Player('x'),
-            new Player('o')
+            new HumanPlayer('x'),
+            new AIPlayer('o')
         ];
         this.board = new Board();
     }
@@ -26,7 +28,7 @@ export class Game {
             this.currentPlayer = this.currentPlayer === 1 ? 0 : 1;
         }
 
-        this.viewport.innerHTML = JSON.stringify(this.board);
+        this.viewport.innerHTML = this.board.getBoardAsHTML();
     }
 
     private isFinished() : boolean {

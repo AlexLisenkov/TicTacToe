@@ -17,6 +17,6 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: 'c:\\src\\TicTacToe\\www'
+    path: '/Library/WebServer/Documents/TicTacToe/www'
   }
 };
