@@ -8,9 +8,7 @@ export class TileCombination {
         this.tiles = tiles;
     }
 
-    hasThreeOfTheSameKind() : boolean {
-        return this.tiles[0].isMarked() &&
-            this.tiles[1].getMark() == this.tiles[2].getMark() &&
-            this.tiles[0].getMark() == this.tiles[2].getMark();
+    hasThreeOfTheSameKind(mark: string) : boolean {
+        return this.tiles[0].getMark() === mark && this.tiles[1].getMark() === mark && this.tiles[2].getMark() === mark;
     }
 }

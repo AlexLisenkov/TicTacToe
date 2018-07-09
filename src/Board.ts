@@ -77,9 +77,9 @@ export class Board
         return emptyPositions;
     }
 
-    hasThreeInARowOfTheSameKind() : boolean {
+    hasThreeInARowOfTheSameKind(mark: string) : boolean {
         for(let i = 0; i < this.tileCombinations.length; i++) {
-            if(this.tileCombinations[i].hasThreeOfTheSameKind()) {
+            if(this.tileCombinations[i].hasThreeOfTheSameKind(mark)) {
                 return true
             }
         }
